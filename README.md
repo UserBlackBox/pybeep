@@ -9,7 +9,7 @@ Copy the binary to your path in `/bin` or `~/.local/bin`
 ## Usage
 ```
 beep [-f N] [-l N]
-beep [ OPTIONS ] [-n] [--new] [ OPTIONS ]
+beep [ OPTIONS ] [-n] [ OPTIONS ]
 beep [-h] [--help]
 
 -h, --help   show this help page

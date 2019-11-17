@@ -8,7 +8,7 @@ if "-h" in args or "--help" in args: # help message
     print("pybeep - python3 alternative to beep using ALSA")
     print("")
     print(beep+" [-f N] [-l N]")
-    print(beep+" [ OPTIONS ] [-n] [--new] [ OPTIONS ]")
+    print(beep+" [ OPTIONS ] [-n] [ OPTIONS ]")
     print(beep+" [-h] [--help]")
     print("")
     print("-h, --help   show this help page")

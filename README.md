@@ -20,10 +20,11 @@ beep [-h] [--help]
 ```
 
 ## TODO
-Support for more beep arguments
+• Support for more beep arguments
 
+• Argument aliases
 
-
-
+## Resources 
+Original beep program: [https://github.com/johnath/beep](https://github.com/johnath/beep)
 
 Original beep man page: [https://linux.die.net/man/1/beep](https://linux.die.net/man/1/beep)

@@ -1,7 +1,7 @@
 # pybeep
 python3 alternative to beep using ALSA
 
-Created in Python 3.6 using pysine. Is designed to be an alternative to [beep](https://github.com/johnath/beep) for use without a pc speaker. Has the same arguments as beep.
+Created in Python 3.6 using pysine. Is designed to be an alternative to [beep](https://github.com/johnath/beep) for use on computers without a pcspkr like laptops. Has the same arguments as beep.
 
 ## Install
 Copy the binary to your path in `/bin` or `~/.local/bin`

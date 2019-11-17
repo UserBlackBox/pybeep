@@ -18,7 +18,7 @@ if "-h" in args or "--help" in args: # help message
     print("--verbose    show ALSA messages")
     exit()
 
-if "--verbose" not in args:
+if "--verbose" not in args: # hide ALSA error messages
     from ctypes import *
     ERROR_HANDLER_FUNC = CFUNCTYPE(None, c_char_p, c_int, c_char_p, c_int, c_char_p)
     def py_error_handler(filename, line, function, err, fmt):
@@ -35,35 +35,35 @@ import time
 
 args = args[1:]
 
-if args == []:
+if args == []: # default tone
     sine(440,1)
     exit()
 
-args = [list(g[1]) for g in itertools.groupby(args, key= lambda x: x != '-n') if g[0]]
+args = [list(g[1]) for g in itertools.groupby(args, key= lambda x: x != '-n') if g[0]] # split by '-n'
 freq = 440
 duration = 1
 gap = 0
 
 for i in range(len(args)):
-    freq = 440
+    freq = 440 # defaults if unspecified
     duration = 1
     gap = 0
     for j in range(len(args[i])):
-        if args[i][j] == "-f":
+        if args[i][j] == "-f": # specify frequencies
             try: freq = float(args[i][j+1])
             except:
                 print("Invalid argument format")
                 exit()
-        if args[i][j] == "-l":
-            try: duration = float(args[i][j+1])/1000
+        if args[i][j] == "-l": # specify durations
+            try: duration = float(args[i][j+1])/1000 # convert to seconds
             except:
                 print("Invalid argument format")
                 exit()
-        if args[i][j] == "-d" or args[i][j] == "-D":
+        if args[i][j] == "-d" or args[i][j] == "-D": # specify gap
             try: gap = int(args[i][j+1])/1000
             except:
                 print("Invalid argument format")
                 exit()
-    sine(frequency=freq,duration=duration)
-    time.sleep(gap)
+    sine(frequency=freq,duration=duration) # play tone
+    time.sleep(gap) # gap between tones
 exit()

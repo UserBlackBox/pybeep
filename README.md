@@ -28,3 +28,5 @@ beep [-h] [--help]
 Original beep program: [https://github.com/johnath/beep](https://github.com/johnath/beep)
 
 Original beep man page: [https://linux.die.net/man/1/beep](https://linux.die.net/man/1/beep)
+
+Compatible beep music bash scripts: [https://github.com/ShaneMcC/beeps](https://github.com/ShaneMcC/beeps)

@@ -1214,7 +1214,7 @@ static PyObject *__pyx_tuple__7;
 static PyObject *__pyx_tuple__9;
 static PyObject *__pyx_codeobj__5;
 
-/* "beep.py":44
+/* "beep.py":43
  *     exit()
  * 
  * args = [list(g[1]) for g in itertools.groupby(args, key= lambda x: x != '-n') if g[0]] # split by '-n'             # <<<<<<<<<<<<<<
@@ -1242,7 +1242,7 @@ static PyObject *__pyx_lambda_funcdef_4beep_lambda(CYTHON_UNUSED PyObject *__pyx
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("lambda", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyObject_RichCompare(__pyx_v_x, __pyx_kp_s_n, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_t_1 = PyObject_RichCompare(__pyx_v_x, __pyx_kp_s_n, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 43, __pyx_L1_error)
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
@@ -1730,7 +1730,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
 };
 static int __Pyx_InitCachedBuiltins(void) {
   __pyx_builtin_exit = __Pyx_GetBuiltinName(__pyx_n_s_exit); if (!__pyx_builtin_exit) __PYX_ERR(0, 21, __pyx_L1_error)
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 49, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 48, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -1757,42 +1757,42 @@ static int __Pyx_InitCachedConstants(void) {
  *     c_error_handler = ERROR_HANDLER_FUNC(py_error_handler)
  *     asound = cdll.LoadLibrary('libasound.so')             # <<<<<<<<<<<<<<
  *     asound.snd_lib_error_set_handler(c_error_handler)
- * else:
+ * else: args.remove("--verbose")
  */
   __pyx_tuple__6 = PyTuple_Pack(1, __pyx_kp_s_libasound_so); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
 
-  /* "beep.py":32
+  /* "beep.py":31
+ *     asound = cdll.LoadLibrary('libasound.so')
  *     asound.snd_lib_error_set_handler(c_error_handler)
- * else:
- *     args.remove("--verbose")             # <<<<<<<<<<<<<<
+ * else: args.remove("--verbose")             # <<<<<<<<<<<<<<
  * 
  * from pysine import sine
  */
-  __pyx_tuple__7 = PyTuple_Pack(1, __pyx_kp_s_verbose); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 32, __pyx_L1_error)
+  __pyx_tuple__7 = PyTuple_Pack(1, __pyx_kp_s_verbose); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 31, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
 
-  /* "beep.py":38
+  /* "beep.py":37
  * import time
  * 
  * args = args[1:]             # <<<<<<<<<<<<<<
  * 
  * if args == []: # default tone
  */
-  __pyx_slice__8 = PySlice_New(__pyx_int_1, Py_None, Py_None); if (unlikely(!__pyx_slice__8)) __PYX_ERR(0, 38, __pyx_L1_error)
+  __pyx_slice__8 = PySlice_New(__pyx_int_1, Py_None, Py_None); if (unlikely(!__pyx_slice__8)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__8);
   __Pyx_GIVEREF(__pyx_slice__8);
 
-  /* "beep.py":41
+  /* "beep.py":40
  * 
  * if args == []: # default tone
  *     sine(440,1)             # <<<<<<<<<<<<<<
  *     exit()
  * 
  */
-  __pyx_tuple__9 = PyTuple_Pack(2, __pyx_int_440, __pyx_int_1); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_tuple__9 = PyTuple_Pack(2, __pyx_int_440, __pyx_int_1); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
   __Pyx_RefNannyFinishContext();
@@ -2346,7 +2346,7 @@ PyMODINIT_FUNC PyInit_beep(void)
  *     c_error_handler = ERROR_HANDLER_FUNC(py_error_handler)
  *     asound = cdll.LoadLibrary('libasound.so')             # <<<<<<<<<<<<<<
  *     asound.snd_lib_error_set_handler(c_error_handler)
- * else:
+ * else: args.remove("--verbose")
  */
     __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_cdll); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 29, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
@@ -2363,8 +2363,8 @@ PyMODINIT_FUNC PyInit_beep(void)
  *     c_error_handler = ERROR_HANDLER_FUNC(py_error_handler)
  *     asound = cdll.LoadLibrary('libasound.so')
  *     asound.snd_lib_error_set_handler(c_error_handler)             # <<<<<<<<<<<<<<
- * else:
- *     args.remove("--verbose")
+ * else: args.remove("--verbose")
+ * 
  */
     __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_asound); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 30, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
@@ -2431,130 +2431,130 @@ PyMODINIT_FUNC PyInit_beep(void)
     goto __pyx_L5;
   }
 
-  /* "beep.py":32
+  /* "beep.py":31
+ *     asound = cdll.LoadLibrary('libasound.so')
  *     asound.snd_lib_error_set_handler(c_error_handler)
- * else:
- *     args.remove("--verbose")             # <<<<<<<<<<<<<<
+ * else: args.remove("--verbose")             # <<<<<<<<<<<<<<
  * 
  * from pysine import sine
  */
   /*else*/ {
-    __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 32, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 31, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_remove); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 32, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_remove); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 31, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 32, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_tuple__7, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 31, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
   __pyx_L5:;
 
-  /* "beep.py":34
- *     args.remove("--verbose")
+  /* "beep.py":33
+ * else: args.remove("--verbose")
  * 
  * from pysine import sine             # <<<<<<<<<<<<<<
  * import itertools
  * import time
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_sine);
   __Pyx_GIVEREF(__pyx_n_s_sine);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_sine);
-  __pyx_t_9 = __Pyx_Import(__pyx_n_s_pysine, __pyx_t_1, -1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 34, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_Import(__pyx_n_s_pysine, __pyx_t_1, -1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_9, __pyx_n_s_sine); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_9, __pyx_n_s_sine); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_sine, __pyx_t_1) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_sine, __pyx_t_1) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-  /* "beep.py":35
+  /* "beep.py":34
  * 
  * from pysine import sine
  * import itertools             # <<<<<<<<<<<<<<
  * import time
  * 
  */
-  __pyx_t_9 = __Pyx_Import(__pyx_n_s_itertools, 0, -1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 35, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_Import(__pyx_n_s_itertools, 0, -1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_itertools, __pyx_t_9) < 0) __PYX_ERR(0, 35, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_itertools, __pyx_t_9) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-  /* "beep.py":36
+  /* "beep.py":35
  * from pysine import sine
  * import itertools
  * import time             # <<<<<<<<<<<<<<
  * 
  * args = args[1:]
  */
-  __pyx_t_9 = __Pyx_Import(__pyx_n_s_time, 0, -1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_Import(__pyx_n_s_time, 0, -1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_time, __pyx_t_9) < 0) __PYX_ERR(0, 36, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_time, __pyx_t_9) < 0) __PYX_ERR(0, 35, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-  /* "beep.py":38
+  /* "beep.py":37
  * import time
  * 
  * args = args[1:]             # <<<<<<<<<<<<<<
  * 
  * if args == []: # default tone
  */
-  __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 38, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_1 = __Pyx_PyObject_GetSlice(__pyx_t_9, 1, 0, NULL, NULL, &__pyx_slice__8, 1, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 38, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetSlice(__pyx_t_9, 1, 0, NULL, NULL, &__pyx_slice__8, 1, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_args, __pyx_t_1) < 0) __PYX_ERR(0, 38, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_args, __pyx_t_1) < 0) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "beep.py":40
+  /* "beep.py":39
  * args = args[1:]
  * 
  * if args == []: # default tone             # <<<<<<<<<<<<<<
  *     sine(440,1)
  *     exit()
  */
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_9 = PyList_New(0); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 40, __pyx_L1_error)
+  __pyx_t_9 = PyList_New(0); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_10 = PyObject_RichCompare(__pyx_t_1, __pyx_t_9, Py_EQ); __Pyx_XGOTREF(__pyx_t_10); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 40, __pyx_L1_error)
+  __pyx_t_10 = PyObject_RichCompare(__pyx_t_1, __pyx_t_9, Py_EQ); __Pyx_XGOTREF(__pyx_t_10); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_10); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 40, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_10); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
   if (__pyx_t_4) {
 
-    /* "beep.py":41
+    /* "beep.py":40
  * 
  * if args == []: # default tone
  *     sine(440,1)             # <<<<<<<<<<<<<<
  *     exit()
  * 
  */
-    __pyx_t_10 = __Pyx_GetModuleGlobalName(__pyx_n_s_sine); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 41, __pyx_L1_error)
+    __pyx_t_10 = __Pyx_GetModuleGlobalName(__pyx_n_s_sine); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 40, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
-    __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_10, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 41, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_10, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 40, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-    /* "beep.py":42
+    /* "beep.py":41
  * if args == []: # default tone
  *     sine(440,1)
  *     exit()             # <<<<<<<<<<<<<<
  * 
  * args = [list(g[1]) for g in itertools.groupby(args, key= lambda x: x != '-n') if g[0]] # split by '-n'
  */
-    __pyx_t_9 = __Pyx_PyObject_CallNoArg(__pyx_builtin_exit); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 42, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyObject_CallNoArg(__pyx_builtin_exit); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 41, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-    /* "beep.py":40
+    /* "beep.py":39
  * args = args[1:]
  * 
  * if args == []: # default tone             # <<<<<<<<<<<<<<
@@ -2563,34 +2563,34 @@ PyMODINIT_FUNC PyInit_beep(void)
  */
   }
 
-  /* "beep.py":44
+  /* "beep.py":43
  *     exit()
  * 
  * args = [list(g[1]) for g in itertools.groupby(args, key= lambda x: x != '-n') if g[0]] # split by '-n'             # <<<<<<<<<<<<<<
  * freq = 440
  * duration = 1
  */
-  __pyx_t_9 = PyList_New(0); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_t_9 = PyList_New(0); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_10 = __Pyx_GetModuleGlobalName(__pyx_n_s_itertools); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_GetModuleGlobalName(__pyx_n_s_itertools); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_groupby); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_groupby); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-  __pyx_t_10 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_10);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_10);
   __pyx_t_10 = 0;
-  __pyx_t_10 = PyDict_New(); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_t_10 = PyDict_New(); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_13 = __Pyx_CyFunction_NewEx(&__pyx_mdef_4beep_2lambda, 0, __pyx_n_s_lambda, NULL, __pyx_n_s_beep, __pyx_d, NULL); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_t_13 = __Pyx_CyFunction_NewEx(&__pyx_mdef_4beep_2lambda, 0, __pyx_n_s_lambda, NULL, __pyx_n_s_beep, __pyx_d, NULL); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
-  if (PyDict_SetItem(__pyx_t_10, __pyx_n_s_key, __pyx_t_13) < 0) __PYX_ERR(0, 44, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_10, __pyx_n_s_key, __pyx_t_13) < 0) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-  __pyx_t_13 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, __pyx_t_10); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_t_13 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, __pyx_t_10); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -2599,9 +2599,9 @@ PyMODINIT_FUNC PyInit_beep(void)
     __pyx_t_10 = __pyx_t_13; __Pyx_INCREF(__pyx_t_10); __pyx_t_14 = 0;
     __pyx_t_15 = NULL;
   } else {
-    __pyx_t_14 = -1; __pyx_t_10 = PyObject_GetIter(__pyx_t_13); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 44, __pyx_L1_error)
+    __pyx_t_14 = -1; __pyx_t_10 = PyObject_GetIter(__pyx_t_13); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 43, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
-    __pyx_t_15 = Py_TYPE(__pyx_t_10)->tp_iternext; if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 44, __pyx_L1_error)
+    __pyx_t_15 = Py_TYPE(__pyx_t_10)->tp_iternext; if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 43, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
   for (;;) {
@@ -2609,17 +2609,17 @@ PyMODINIT_FUNC PyInit_beep(void)
       if (likely(PyList_CheckExact(__pyx_t_10))) {
         if (__pyx_t_14 >= PyList_GET_SIZE(__pyx_t_10)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_13 = PyList_GET_ITEM(__pyx_t_10, __pyx_t_14); __Pyx_INCREF(__pyx_t_13); __pyx_t_14++; if (unlikely(0 < 0)) __PYX_ERR(0, 44, __pyx_L1_error)
+        __pyx_t_13 = PyList_GET_ITEM(__pyx_t_10, __pyx_t_14); __Pyx_INCREF(__pyx_t_13); __pyx_t_14++; if (unlikely(0 < 0)) __PYX_ERR(0, 43, __pyx_L1_error)
         #else
-        __pyx_t_13 = PySequence_ITEM(__pyx_t_10, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 44, __pyx_L1_error)
+        __pyx_t_13 = PySequence_ITEM(__pyx_t_10, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 43, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_13);
         #endif
       } else {
         if (__pyx_t_14 >= PyTuple_GET_SIZE(__pyx_t_10)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_13 = PyTuple_GET_ITEM(__pyx_t_10, __pyx_t_14); __Pyx_INCREF(__pyx_t_13); __pyx_t_14++; if (unlikely(0 < 0)) __PYX_ERR(0, 44, __pyx_L1_error)
+        __pyx_t_13 = PyTuple_GET_ITEM(__pyx_t_10, __pyx_t_14); __Pyx_INCREF(__pyx_t_13); __pyx_t_14++; if (unlikely(0 < 0)) __PYX_ERR(0, 43, __pyx_L1_error)
         #else
-        __pyx_t_13 = PySequence_ITEM(__pyx_t_10, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 44, __pyx_L1_error)
+        __pyx_t_13 = PySequence_ITEM(__pyx_t_10, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 43, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_13);
         #endif
       }
@@ -2629,93 +2629,93 @@ PyMODINIT_FUNC PyInit_beep(void)
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 44, __pyx_L1_error)
+          else __PYX_ERR(0, 43, __pyx_L1_error)
         }
         break;
       }
       __Pyx_GOTREF(__pyx_t_13);
     }
-    if (PyDict_SetItem(__pyx_d, __pyx_n_s_g, __pyx_t_13) < 0) __PYX_ERR(0, 44, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_d, __pyx_n_s_g, __pyx_t_13) < 0) __PYX_ERR(0, 43, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_g); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 44, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_g); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 43, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_13, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 44, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_13, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 44, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 43, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_4) {
-      __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_g); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 44, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_g); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_13 = __Pyx_GetItemInt(__pyx_t_2, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 44, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_GetItemInt(__pyx_t_2, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 43, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PySequence_List(__pyx_t_13); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 44, __pyx_L1_error)
+      __pyx_t_2 = PySequence_List(__pyx_t_13); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-      if (unlikely(__Pyx_ListComp_Append(__pyx_t_9, (PyObject*)__pyx_t_2))) __PYX_ERR(0, 44, __pyx_L1_error)
+      if (unlikely(__Pyx_ListComp_Append(__pyx_t_9, (PyObject*)__pyx_t_2))) __PYX_ERR(0, 43, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_args, __pyx_t_9) < 0) __PYX_ERR(0, 44, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_args, __pyx_t_9) < 0) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-  /* "beep.py":45
+  /* "beep.py":44
  * 
  * args = [list(g[1]) for g in itertools.groupby(args, key= lambda x: x != '-n') if g[0]] # split by '-n'
  * freq = 440             # <<<<<<<<<<<<<<
  * duration = 1
  * gap = 0
  */
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_freq, __pyx_int_440) < 0) __PYX_ERR(0, 45, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_freq, __pyx_int_440) < 0) __PYX_ERR(0, 44, __pyx_L1_error)
 
-  /* "beep.py":46
+  /* "beep.py":45
  * args = [list(g[1]) for g in itertools.groupby(args, key= lambda x: x != '-n') if g[0]] # split by '-n'
  * freq = 440
  * duration = 1             # <<<<<<<<<<<<<<
  * gap = 0
  * 
  */
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_duration, __pyx_int_1) < 0) __PYX_ERR(0, 46, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_duration, __pyx_int_1) < 0) __PYX_ERR(0, 45, __pyx_L1_error)
 
-  /* "beep.py":47
+  /* "beep.py":46
  * freq = 440
  * duration = 1
  * gap = 0             # <<<<<<<<<<<<<<
  * 
  * for i in range(len(args)):
  */
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_gap, __pyx_int_0) < 0) __PYX_ERR(0, 47, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_gap, __pyx_int_0) < 0) __PYX_ERR(0, 46, __pyx_L1_error)
 
-  /* "beep.py":49
+  /* "beep.py":48
  * gap = 0
  * 
  * for i in range(len(args)):             # <<<<<<<<<<<<<<
  *     freq = 440 # defaults if unspecified
  *     duration = 1
  */
-  __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 48, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_14 = PyObject_Length(__pyx_t_9); if (unlikely(__pyx_t_14 == -1)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __pyx_t_14 = PyObject_Length(__pyx_t_9); if (unlikely(__pyx_t_14 == -1)) __PYX_ERR(0, 48, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  __pyx_t_9 = PyInt_FromSsize_t(__pyx_t_14); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __pyx_t_9 = PyInt_FromSsize_t(__pyx_t_14); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 48, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_10 = PyTuple_New(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __pyx_t_10 = PyTuple_New(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 48, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
   __Pyx_GIVEREF(__pyx_t_9);
   PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_9);
   __pyx_t_9 = 0;
-  __pyx_t_9 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_10, NULL); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_10, NULL); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 48, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
   if (likely(PyList_CheckExact(__pyx_t_9)) || PyTuple_CheckExact(__pyx_t_9)) {
     __pyx_t_10 = __pyx_t_9; __Pyx_INCREF(__pyx_t_10); __pyx_t_14 = 0;
     __pyx_t_15 = NULL;
   } else {
-    __pyx_t_14 = -1; __pyx_t_10 = PyObject_GetIter(__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 49, __pyx_L1_error)
+    __pyx_t_14 = -1; __pyx_t_10 = PyObject_GetIter(__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 48, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
-    __pyx_t_15 = Py_TYPE(__pyx_t_10)->tp_iternext; if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 49, __pyx_L1_error)
+    __pyx_t_15 = Py_TYPE(__pyx_t_10)->tp_iternext; if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 48, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   for (;;) {
@@ -2723,17 +2723,17 @@ PyMODINIT_FUNC PyInit_beep(void)
       if (likely(PyList_CheckExact(__pyx_t_10))) {
         if (__pyx_t_14 >= PyList_GET_SIZE(__pyx_t_10)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_9 = PyList_GET_ITEM(__pyx_t_10, __pyx_t_14); __Pyx_INCREF(__pyx_t_9); __pyx_t_14++; if (unlikely(0 < 0)) __PYX_ERR(0, 49, __pyx_L1_error)
+        __pyx_t_9 = PyList_GET_ITEM(__pyx_t_10, __pyx_t_14); __Pyx_INCREF(__pyx_t_9); __pyx_t_14++; if (unlikely(0 < 0)) __PYX_ERR(0, 48, __pyx_L1_error)
         #else
-        __pyx_t_9 = PySequence_ITEM(__pyx_t_10, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 49, __pyx_L1_error)
+        __pyx_t_9 = PySequence_ITEM(__pyx_t_10, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 48, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_9);
         #endif
       } else {
         if (__pyx_t_14 >= PyTuple_GET_SIZE(__pyx_t_10)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_9 = PyTuple_GET_ITEM(__pyx_t_10, __pyx_t_14); __Pyx_INCREF(__pyx_t_9); __pyx_t_14++; if (unlikely(0 < 0)) __PYX_ERR(0, 49, __pyx_L1_error)
+        __pyx_t_9 = PyTuple_GET_ITEM(__pyx_t_10, __pyx_t_14); __Pyx_INCREF(__pyx_t_9); __pyx_t_14++; if (unlikely(0 < 0)) __PYX_ERR(0, 48, __pyx_L1_error)
         #else
-        __pyx_t_9 = PySequence_ITEM(__pyx_t_10, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 49, __pyx_L1_error)
+        __pyx_t_9 = PySequence_ITEM(__pyx_t_10, __pyx_t_14); __pyx_t_14++; if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 48, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_9);
         #endif
       }
@@ -2743,76 +2743,76 @@ PyMODINIT_FUNC PyInit_beep(void)
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 49, __pyx_L1_error)
+          else __PYX_ERR(0, 48, __pyx_L1_error)
         }
         break;
       }
       __Pyx_GOTREF(__pyx_t_9);
     }
-    if (PyDict_SetItem(__pyx_d, __pyx_n_s_i, __pyx_t_9) < 0) __PYX_ERR(0, 49, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_d, __pyx_n_s_i, __pyx_t_9) < 0) __PYX_ERR(0, 48, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-    /* "beep.py":50
+    /* "beep.py":49
  * 
  * for i in range(len(args)):
  *     freq = 440 # defaults if unspecified             # <<<<<<<<<<<<<<
  *     duration = 1
  *     gap = 0
  */
-    if (PyDict_SetItem(__pyx_d, __pyx_n_s_freq, __pyx_int_440) < 0) __PYX_ERR(0, 50, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_d, __pyx_n_s_freq, __pyx_int_440) < 0) __PYX_ERR(0, 49, __pyx_L1_error)
 
-    /* "beep.py":51
+    /* "beep.py":50
  * for i in range(len(args)):
  *     freq = 440 # defaults if unspecified
  *     duration = 1             # <<<<<<<<<<<<<<
  *     gap = 0
  *     for j in range(len(args[i])):
  */
-    if (PyDict_SetItem(__pyx_d, __pyx_n_s_duration, __pyx_int_1) < 0) __PYX_ERR(0, 51, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_d, __pyx_n_s_duration, __pyx_int_1) < 0) __PYX_ERR(0, 50, __pyx_L1_error)
 
-    /* "beep.py":52
+    /* "beep.py":51
  *     freq = 440 # defaults if unspecified
  *     duration = 1
  *     gap = 0             # <<<<<<<<<<<<<<
  *     for j in range(len(args[i])):
  *         if args[i][j] == "-f": # specify frequencies
  */
-    if (PyDict_SetItem(__pyx_d, __pyx_n_s_gap, __pyx_int_0) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_d, __pyx_n_s_gap, __pyx_int_0) < 0) __PYX_ERR(0, 51, __pyx_L1_error)
 
-    /* "beep.py":53
+    /* "beep.py":52
  *     duration = 1
  *     gap = 0
  *     for j in range(len(args[i])):             # <<<<<<<<<<<<<<
  *         if args[i][j] == "-f": # specify frequencies
  *             try: freq = float(args[i][j+1])
  */
-    __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 53, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 52, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_i); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 53, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_i); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 52, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_13 = PyObject_GetItem(__pyx_t_9, __pyx_t_2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 53, __pyx_L1_error)
+    __pyx_t_13 = PyObject_GetItem(__pyx_t_9, __pyx_t_2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 52, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_16 = PyObject_Length(__pyx_t_13); if (unlikely(__pyx_t_16 == -1)) __PYX_ERR(0, 53, __pyx_L1_error)
+    __pyx_t_16 = PyObject_Length(__pyx_t_13); if (unlikely(__pyx_t_16 == -1)) __PYX_ERR(0, 52, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = PyInt_FromSsize_t(__pyx_t_16); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 53, __pyx_L1_error)
+    __pyx_t_13 = PyInt_FromSsize_t(__pyx_t_16); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 52, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 53, __pyx_L1_error)
+    __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 52, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_GIVEREF(__pyx_t_13);
     PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_13);
     __pyx_t_13 = 0;
-    __pyx_t_13 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_2, NULL); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 53, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_2, NULL); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 52, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (likely(PyList_CheckExact(__pyx_t_13)) || PyTuple_CheckExact(__pyx_t_13)) {
       __pyx_t_2 = __pyx_t_13; __Pyx_INCREF(__pyx_t_2); __pyx_t_16 = 0;
       __pyx_t_17 = NULL;
     } else {
-      __pyx_t_16 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_13); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 53, __pyx_L1_error)
+      __pyx_t_16 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_13); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 52, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_17 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 53, __pyx_L1_error)
+      __pyx_t_17 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 52, __pyx_L1_error)
     }
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     for (;;) {
@@ -2820,17 +2820,17 @@ PyMODINIT_FUNC PyInit_beep(void)
         if (likely(PyList_CheckExact(__pyx_t_2))) {
           if (__pyx_t_16 >= PyList_GET_SIZE(__pyx_t_2)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_13 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_16); __Pyx_INCREF(__pyx_t_13); __pyx_t_16++; if (unlikely(0 < 0)) __PYX_ERR(0, 53, __pyx_L1_error)
+          __pyx_t_13 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_16); __Pyx_INCREF(__pyx_t_13); __pyx_t_16++; if (unlikely(0 < 0)) __PYX_ERR(0, 52, __pyx_L1_error)
           #else
-          __pyx_t_13 = PySequence_ITEM(__pyx_t_2, __pyx_t_16); __pyx_t_16++; if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 53, __pyx_L1_error)
+          __pyx_t_13 = PySequence_ITEM(__pyx_t_2, __pyx_t_16); __pyx_t_16++; if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 52, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_13);
           #endif
         } else {
           if (__pyx_t_16 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_13 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_16); __Pyx_INCREF(__pyx_t_13); __pyx_t_16++; if (unlikely(0 < 0)) __PYX_ERR(0, 53, __pyx_L1_error)
+          __pyx_t_13 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_16); __Pyx_INCREF(__pyx_t_13); __pyx_t_16++; if (unlikely(0 < 0)) __PYX_ERR(0, 52, __pyx_L1_error)
           #else
-          __pyx_t_13 = PySequence_ITEM(__pyx_t_2, __pyx_t_16); __pyx_t_16++; if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 53, __pyx_L1_error)
+          __pyx_t_13 = PySequence_ITEM(__pyx_t_2, __pyx_t_16); __pyx_t_16++; if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 52, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_13);
           #endif
         }
@@ -2840,41 +2840,41 @@ PyMODINIT_FUNC PyInit_beep(void)
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 53, __pyx_L1_error)
+            else __PYX_ERR(0, 52, __pyx_L1_error)
           }
           break;
         }
         __Pyx_GOTREF(__pyx_t_13);
       }
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_j, __pyx_t_13) < 0) __PYX_ERR(0, 53, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_d, __pyx_n_s_j, __pyx_t_13) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
-      /* "beep.py":54
+      /* "beep.py":53
  *     gap = 0
  *     for j in range(len(args[i])):
  *         if args[i][j] == "-f": # specify frequencies             # <<<<<<<<<<<<<<
  *             try: freq = float(args[i][j+1])
  *             except:
  */
-      __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 54, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 53, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
-      __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_i); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 54, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_i); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 53, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_1 = PyObject_GetItem(__pyx_t_13, __pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 54, __pyx_L1_error)
+      __pyx_t_1 = PyObject_GetItem(__pyx_t_13, __pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 53, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_j); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 54, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_j); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 53, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_13 = PyObject_GetItem(__pyx_t_1, __pyx_t_9); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 54, __pyx_L1_error)
+      __pyx_t_13 = PyObject_GetItem(__pyx_t_1, __pyx_t_9); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 53, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __pyx_t_4 = (__Pyx_PyString_Equals(__pyx_t_13, __pyx_kp_s_f, Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 54, __pyx_L1_error)
+      __pyx_t_4 = (__Pyx_PyString_Equals(__pyx_t_13, __pyx_kp_s_f, Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 53, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
       if (__pyx_t_4) {
 
-        /* "beep.py":55
+        /* "beep.py":54
  *     for j in range(len(args[i])):
  *         if args[i][j] == "-f": # specify frequencies
  *             try: freq = float(args[i][j+1])             # <<<<<<<<<<<<<<
@@ -2889,27 +2889,27 @@ PyMODINIT_FUNC PyInit_beep(void)
           __Pyx_XGOTREF(__pyx_t_19);
           __Pyx_XGOTREF(__pyx_t_20);
           /*try:*/ {
-            __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 55, __pyx_L15_error)
+            __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 54, __pyx_L15_error)
             __Pyx_GOTREF(__pyx_t_13);
-            __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_i); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 55, __pyx_L15_error)
+            __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_i); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 54, __pyx_L15_error)
             __Pyx_GOTREF(__pyx_t_9);
-            __pyx_t_1 = PyObject_GetItem(__pyx_t_13, __pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 55, __pyx_L15_error)
+            __pyx_t_1 = PyObject_GetItem(__pyx_t_13, __pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 54, __pyx_L15_error)
             __Pyx_GOTREF(__pyx_t_1);
             __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
             __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-            __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_j); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 55, __pyx_L15_error)
+            __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_j); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 54, __pyx_L15_error)
             __Pyx_GOTREF(__pyx_t_9);
-            __pyx_t_13 = __Pyx_PyInt_AddObjC(__pyx_t_9, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 55, __pyx_L15_error)
+            __pyx_t_13 = __Pyx_PyInt_AddObjC(__pyx_t_9, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 54, __pyx_L15_error)
             __Pyx_GOTREF(__pyx_t_13);
             __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-            __pyx_t_9 = PyObject_GetItem(__pyx_t_1, __pyx_t_13); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 55, __pyx_L15_error)
+            __pyx_t_9 = PyObject_GetItem(__pyx_t_1, __pyx_t_13); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 54, __pyx_L15_error)
             __Pyx_GOTREF(__pyx_t_9);
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
             __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-            __pyx_t_13 = __Pyx_PyNumber_Float(__pyx_t_9); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 55, __pyx_L15_error)
+            __pyx_t_13 = __Pyx_PyNumber_Float(__pyx_t_9); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 54, __pyx_L15_error)
             __Pyx_GOTREF(__pyx_t_13);
             __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-            if (PyDict_SetItem(__pyx_d, __pyx_n_s_freq, __pyx_t_13) < 0) __PYX_ERR(0, 55, __pyx_L15_error)
+            if (PyDict_SetItem(__pyx_d, __pyx_n_s_freq, __pyx_t_13) < 0) __PYX_ERR(0, 54, __pyx_L15_error)
             __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
           }
           __Pyx_XDECREF(__pyx_t_18); __pyx_t_18 = 0;
@@ -2926,7 +2926,7 @@ PyMODINIT_FUNC PyInit_beep(void)
           __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
           __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
 
-          /* "beep.py":56
+          /* "beep.py":55
  *         if args[i][j] == "-f": # specify frequencies
  *             try: freq = float(args[i][j+1])
  *             except:             # <<<<<<<<<<<<<<
@@ -2935,40 +2935,40 @@ PyMODINIT_FUNC PyInit_beep(void)
  */
           /*except:*/ {
             __Pyx_AddTraceback("beep", __pyx_clineno, __pyx_lineno, __pyx_filename);
-            if (__Pyx_GetException(&__pyx_t_13, &__pyx_t_9, &__pyx_t_1) < 0) __PYX_ERR(0, 56, __pyx_L17_except_error)
+            if (__Pyx_GetException(&__pyx_t_13, &__pyx_t_9, &__pyx_t_1) < 0) __PYX_ERR(0, 55, __pyx_L17_except_error)
             __Pyx_GOTREF(__pyx_t_13);
             __Pyx_GOTREF(__pyx_t_9);
             __Pyx_GOTREF(__pyx_t_1);
 
-            /* "beep.py":57
+            /* "beep.py":56
  *             try: freq = float(args[i][j+1])
  *             except:
  *                 print("Invalid argument format\nView help with "+beep[0]+" -h")             # <<<<<<<<<<<<<<
  *                 exit()
  *         if args[i][j] == "-l": # specify durations
  */
-            __pyx_t_8 = __Pyx_GetModuleGlobalName(__pyx_n_s_beep); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 57, __pyx_L17_except_error)
+            __pyx_t_8 = __Pyx_GetModuleGlobalName(__pyx_n_s_beep); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 56, __pyx_L17_except_error)
             __Pyx_GOTREF(__pyx_t_8);
-            __pyx_t_7 = __Pyx_GetItemInt(__pyx_t_8, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 57, __pyx_L17_except_error)
+            __pyx_t_7 = __Pyx_GetItemInt(__pyx_t_8, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 56, __pyx_L17_except_error)
             __Pyx_GOTREF(__pyx_t_7);
             __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-            __pyx_t_8 = PyNumber_Add(__pyx_kp_s_Invalid_argument_format_View_hel, __pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 57, __pyx_L17_except_error)
+            __pyx_t_8 = PyNumber_Add(__pyx_kp_s_Invalid_argument_format_View_hel, __pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 56, __pyx_L17_except_error)
             __Pyx_GOTREF(__pyx_t_8);
             __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-            __pyx_t_7 = PyNumber_Add(__pyx_t_8, __pyx_kp_s_h_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 57, __pyx_L17_except_error)
+            __pyx_t_7 = PyNumber_Add(__pyx_t_8, __pyx_kp_s_h_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 56, __pyx_L17_except_error)
             __Pyx_GOTREF(__pyx_t_7);
             __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-            if (__Pyx_PrintOne(0, __pyx_t_7) < 0) __PYX_ERR(0, 57, __pyx_L17_except_error)
+            if (__Pyx_PrintOne(0, __pyx_t_7) < 0) __PYX_ERR(0, 56, __pyx_L17_except_error)
             __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-            /* "beep.py":58
+            /* "beep.py":57
  *             except:
  *                 print("Invalid argument format\nView help with "+beep[0]+" -h")
  *                 exit()             # <<<<<<<<<<<<<<
  *         if args[i][j] == "-l": # specify durations
  *             try: duration = float(args[i][j+1])/1000 # convert to seconds
  */
-            __pyx_t_7 = __Pyx_PyObject_CallNoArg(__pyx_builtin_exit); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 58, __pyx_L17_except_error)
+            __pyx_t_7 = __Pyx_PyObject_CallNoArg(__pyx_builtin_exit); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 57, __pyx_L17_except_error)
             __Pyx_GOTREF(__pyx_t_7);
             __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
             __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
@@ -2978,7 +2978,7 @@ PyMODINIT_FUNC PyInit_beep(void)
           }
           __pyx_L17_except_error:;
 
-          /* "beep.py":55
+          /* "beep.py":54
  *     for j in range(len(args[i])):
  *         if args[i][j] == "-f": # specify frequencies
  *             try: freq = float(args[i][j+1])             # <<<<<<<<<<<<<<
@@ -3000,7 +3000,7 @@ PyMODINIT_FUNC PyInit_beep(void)
           __pyx_L22_try_end:;
         }
 
-        /* "beep.py":54
+        /* "beep.py":53
  *     gap = 0
  *     for j in range(len(args[i])):
  *         if args[i][j] == "-f": # specify frequencies             # <<<<<<<<<<<<<<
@@ -3009,32 +3009,32 @@ PyMODINIT_FUNC PyInit_beep(void)
  */
       }
 
-      /* "beep.py":59
+      /* "beep.py":58
  *                 print("Invalid argument format\nView help with "+beep[0]+" -h")
  *                 exit()
  *         if args[i][j] == "-l": # specify durations             # <<<<<<<<<<<<<<
  *             try: duration = float(args[i][j+1])/1000 # convert to seconds
  *             except:
  */
-      __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 59, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 58, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_i); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 59, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_i); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 58, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_13 = PyObject_GetItem(__pyx_t_1, __pyx_t_9); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 59, __pyx_L1_error)
+      __pyx_t_13 = PyObject_GetItem(__pyx_t_1, __pyx_t_9); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 58, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_j); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 59, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_j); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 58, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_1 = PyObject_GetItem(__pyx_t_13, __pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 59, __pyx_L1_error)
+      __pyx_t_1 = PyObject_GetItem(__pyx_t_13, __pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 58, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __pyx_t_4 = (__Pyx_PyString_Equals(__pyx_t_1, __pyx_kp_s_l, Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 59, __pyx_L1_error)
+      __pyx_t_4 = (__Pyx_PyString_Equals(__pyx_t_1, __pyx_kp_s_l, Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 58, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       if (__pyx_t_4) {
 
-        /* "beep.py":60
+        /* "beep.py":59
  *                 exit()
  *         if args[i][j] == "-l": # specify durations
  *             try: duration = float(args[i][j+1])/1000 # convert to seconds             # <<<<<<<<<<<<<<
@@ -3049,28 +3049,28 @@ PyMODINIT_FUNC PyInit_beep(void)
           __Pyx_XGOTREF(__pyx_t_19);
           __Pyx_XGOTREF(__pyx_t_18);
           /*try:*/ {
-            __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 60, __pyx_L26_error)
+            __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 59, __pyx_L26_error)
             __Pyx_GOTREF(__pyx_t_1);
-            __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_i); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 60, __pyx_L26_error)
+            __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_i); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 59, __pyx_L26_error)
             __Pyx_GOTREF(__pyx_t_9);
-            __pyx_t_13 = PyObject_GetItem(__pyx_t_1, __pyx_t_9); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 60, __pyx_L26_error)
+            __pyx_t_13 = PyObject_GetItem(__pyx_t_1, __pyx_t_9); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 59, __pyx_L26_error)
             __Pyx_GOTREF(__pyx_t_13);
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
             __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-            __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_j); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 60, __pyx_L26_error)
+            __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_j); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 59, __pyx_L26_error)
             __Pyx_GOTREF(__pyx_t_9);
-            __pyx_t_1 = __Pyx_PyInt_AddObjC(__pyx_t_9, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 60, __pyx_L26_error)
+            __pyx_t_1 = __Pyx_PyInt_AddObjC(__pyx_t_9, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 59, __pyx_L26_error)
             __Pyx_GOTREF(__pyx_t_1);
             __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-            __pyx_t_9 = PyObject_GetItem(__pyx_t_13, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 60, __pyx_L26_error)
+            __pyx_t_9 = PyObject_GetItem(__pyx_t_13, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 59, __pyx_L26_error)
             __Pyx_GOTREF(__pyx_t_9);
             __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-            __pyx_t_21 = __Pyx_PyObject_AsDouble(__pyx_t_9); if (unlikely(__pyx_t_21 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 60, __pyx_L26_error)
+            __pyx_t_21 = __Pyx_PyObject_AsDouble(__pyx_t_9); if (unlikely(__pyx_t_21 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 59, __pyx_L26_error)
             __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-            __pyx_t_9 = PyFloat_FromDouble((__pyx_t_21 / 1000.0)); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 60, __pyx_L26_error)
+            __pyx_t_9 = PyFloat_FromDouble((__pyx_t_21 / 1000.0)); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 59, __pyx_L26_error)
             __Pyx_GOTREF(__pyx_t_9);
-            if (PyDict_SetItem(__pyx_d, __pyx_n_s_duration, __pyx_t_9) < 0) __PYX_ERR(0, 60, __pyx_L26_error)
+            if (PyDict_SetItem(__pyx_d, __pyx_n_s_duration, __pyx_t_9) < 0) __PYX_ERR(0, 59, __pyx_L26_error)
             __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
           }
           __Pyx_XDECREF(__pyx_t_20); __pyx_t_20 = 0;
@@ -3087,7 +3087,7 @@ PyMODINIT_FUNC PyInit_beep(void)
           __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-          /* "beep.py":61
+          /* "beep.py":60
  *         if args[i][j] == "-l": # specify durations
  *             try: duration = float(args[i][j+1])/1000 # convert to seconds
  *             except:             # <<<<<<<<<<<<<<
@@ -3096,40 +3096,40 @@ PyMODINIT_FUNC PyInit_beep(void)
  */
           /*except:*/ {
             __Pyx_AddTraceback("beep", __pyx_clineno, __pyx_lineno, __pyx_filename);
-            if (__Pyx_GetException(&__pyx_t_9, &__pyx_t_1, &__pyx_t_13) < 0) __PYX_ERR(0, 61, __pyx_L28_except_error)
+            if (__Pyx_GetException(&__pyx_t_9, &__pyx_t_1, &__pyx_t_13) < 0) __PYX_ERR(0, 60, __pyx_L28_except_error)
             __Pyx_GOTREF(__pyx_t_9);
             __Pyx_GOTREF(__pyx_t_1);
             __Pyx_GOTREF(__pyx_t_13);
 
-            /* "beep.py":62
+            /* "beep.py":61
  *             try: duration = float(args[i][j+1])/1000 # convert to seconds
  *             except:
  *                 print("Invalid argument format\nView help with "+beep[0]+" -h")             # <<<<<<<<<<<<<<
  *                 exit()
  *         if args[i][j] == "-d" or args[i][j] == "-D": # specify gap
  */
-            __pyx_t_7 = __Pyx_GetModuleGlobalName(__pyx_n_s_beep); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 62, __pyx_L28_except_error)
+            __pyx_t_7 = __Pyx_GetModuleGlobalName(__pyx_n_s_beep); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 61, __pyx_L28_except_error)
             __Pyx_GOTREF(__pyx_t_7);
-            __pyx_t_8 = __Pyx_GetItemInt(__pyx_t_7, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 62, __pyx_L28_except_error)
+            __pyx_t_8 = __Pyx_GetItemInt(__pyx_t_7, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 61, __pyx_L28_except_error)
             __Pyx_GOTREF(__pyx_t_8);
             __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-            __pyx_t_7 = PyNumber_Add(__pyx_kp_s_Invalid_argument_format_View_hel, __pyx_t_8); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 62, __pyx_L28_except_error)
+            __pyx_t_7 = PyNumber_Add(__pyx_kp_s_Invalid_argument_format_View_hel, __pyx_t_8); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 61, __pyx_L28_except_error)
             __Pyx_GOTREF(__pyx_t_7);
             __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-            __pyx_t_8 = PyNumber_Add(__pyx_t_7, __pyx_kp_s_h_2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 62, __pyx_L28_except_error)
+            __pyx_t_8 = PyNumber_Add(__pyx_t_7, __pyx_kp_s_h_2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 61, __pyx_L28_except_error)
             __Pyx_GOTREF(__pyx_t_8);
             __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-            if (__Pyx_PrintOne(0, __pyx_t_8) < 0) __PYX_ERR(0, 62, __pyx_L28_except_error)
+            if (__Pyx_PrintOne(0, __pyx_t_8) < 0) __PYX_ERR(0, 61, __pyx_L28_except_error)
             __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-            /* "beep.py":63
+            /* "beep.py":62
  *             except:
  *                 print("Invalid argument format\nView help with "+beep[0]+" -h")
  *                 exit()             # <<<<<<<<<<<<<<
  *         if args[i][j] == "-d" or args[i][j] == "-D": # specify gap
  *             try: gap = int(args[i][j+1])/1000
  */
-            __pyx_t_8 = __Pyx_PyObject_CallNoArg(__pyx_builtin_exit); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 63, __pyx_L28_except_error)
+            __pyx_t_8 = __Pyx_PyObject_CallNoArg(__pyx_builtin_exit); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 62, __pyx_L28_except_error)
             __Pyx_GOTREF(__pyx_t_8);
             __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
             __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
@@ -3139,7 +3139,7 @@ PyMODINIT_FUNC PyInit_beep(void)
           }
           __pyx_L28_except_error:;
 
-          /* "beep.py":60
+          /* "beep.py":59
  *                 exit()
  *         if args[i][j] == "-l": # specify durations
  *             try: duration = float(args[i][j+1])/1000 # convert to seconds             # <<<<<<<<<<<<<<
@@ -3161,7 +3161,7 @@ PyMODINIT_FUNC PyInit_beep(void)
           __pyx_L33_try_end:;
         }
 
-        /* "beep.py":59
+        /* "beep.py":58
  *                 print("Invalid argument format\nView help with "+beep[0]+" -h")
  *                 exit()
  *         if args[i][j] == "-l": # specify durations             # <<<<<<<<<<<<<<
@@ -3170,55 +3170,55 @@ PyMODINIT_FUNC PyInit_beep(void)
  */
       }
 
-      /* "beep.py":64
+      /* "beep.py":63
  *                 print("Invalid argument format\nView help with "+beep[0]+" -h")
  *                 exit()
  *         if args[i][j] == "-d" or args[i][j] == "-D": # specify gap             # <<<<<<<<<<<<<<
  *             try: gap = int(args[i][j+1])/1000
  *             except:
  */
-      __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 64, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 63, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
-      __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_i); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_i); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_9 = PyObject_GetItem(__pyx_t_13, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 64, __pyx_L1_error)
+      __pyx_t_9 = PyObject_GetItem(__pyx_t_13, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 63, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_j); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_j); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_13 = PyObject_GetItem(__pyx_t_9, __pyx_t_1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 64, __pyx_L1_error)
+      __pyx_t_13 = PyObject_GetItem(__pyx_t_9, __pyx_t_1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 63, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_3 = (__Pyx_PyString_Equals(__pyx_t_13, __pyx_kp_s_d, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 64, __pyx_L1_error)
+      __pyx_t_3 = (__Pyx_PyString_Equals(__pyx_t_13, __pyx_kp_s_d, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 63, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
       if (!__pyx_t_3) {
       } else {
         __pyx_t_4 = __pyx_t_3;
         goto __pyx_L37_bool_binop_done;
       }
-      __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 64, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 63, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
-      __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_i); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_i); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_9 = PyObject_GetItem(__pyx_t_13, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 64, __pyx_L1_error)
+      __pyx_t_9 = PyObject_GetItem(__pyx_t_13, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 63, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_j); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_j); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_13 = PyObject_GetItem(__pyx_t_9, __pyx_t_1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 64, __pyx_L1_error)
+      __pyx_t_13 = PyObject_GetItem(__pyx_t_9, __pyx_t_1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 63, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_3 = (__Pyx_PyString_Equals(__pyx_t_13, __pyx_kp_s_D, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 64, __pyx_L1_error)
+      __pyx_t_3 = (__Pyx_PyString_Equals(__pyx_t_13, __pyx_kp_s_D, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 63, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
       __pyx_t_4 = __pyx_t_3;
       __pyx_L37_bool_binop_done:;
       if (__pyx_t_4) {
 
-        /* "beep.py":65
+        /* "beep.py":64
  *                 exit()
  *         if args[i][j] == "-d" or args[i][j] == "-D": # specify gap
  *             try: gap = int(args[i][j+1])/1000             # <<<<<<<<<<<<<<
@@ -3233,30 +3233,30 @@ PyMODINIT_FUNC PyInit_beep(void)
           __Pyx_XGOTREF(__pyx_t_19);
           __Pyx_XGOTREF(__pyx_t_20);
           /*try:*/ {
-            __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 65, __pyx_L39_error)
+            __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_args); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 64, __pyx_L39_error)
             __Pyx_GOTREF(__pyx_t_13);
-            __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_i); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 65, __pyx_L39_error)
+            __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_i); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L39_error)
             __Pyx_GOTREF(__pyx_t_1);
-            __pyx_t_9 = PyObject_GetItem(__pyx_t_13, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 65, __pyx_L39_error)
+            __pyx_t_9 = PyObject_GetItem(__pyx_t_13, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 64, __pyx_L39_error)
             __Pyx_GOTREF(__pyx_t_9);
             __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-            __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_j); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 65, __pyx_L39_error)
+            __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_j); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L39_error)
             __Pyx_GOTREF(__pyx_t_1);
-            __pyx_t_13 = __Pyx_PyInt_AddObjC(__pyx_t_1, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 65, __pyx_L39_error)
+            __pyx_t_13 = __Pyx_PyInt_AddObjC(__pyx_t_1, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 64, __pyx_L39_error)
             __Pyx_GOTREF(__pyx_t_13);
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-            __pyx_t_1 = PyObject_GetItem(__pyx_t_9, __pyx_t_13); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 65, __pyx_L39_error)
+            __pyx_t_1 = PyObject_GetItem(__pyx_t_9, __pyx_t_13); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L39_error)
             __Pyx_GOTREF(__pyx_t_1);
             __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
             __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-            __pyx_t_13 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 65, __pyx_L39_error)
+            __pyx_t_13 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 64, __pyx_L39_error)
             __Pyx_GOTREF(__pyx_t_13);
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-            __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_t_13, __pyx_int_1000); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 65, __pyx_L39_error)
+            __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_t_13, __pyx_int_1000); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L39_error)
             __Pyx_GOTREF(__pyx_t_1);
             __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-            if (PyDict_SetItem(__pyx_d, __pyx_n_s_gap, __pyx_t_1) < 0) __PYX_ERR(0, 65, __pyx_L39_error)
+            if (PyDict_SetItem(__pyx_d, __pyx_n_s_gap, __pyx_t_1) < 0) __PYX_ERR(0, 64, __pyx_L39_error)
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           }
           __Pyx_XDECREF(__pyx_t_18); __pyx_t_18 = 0;
@@ -3273,7 +3273,7 @@ PyMODINIT_FUNC PyInit_beep(void)
           __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
           __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-          /* "beep.py":66
+          /* "beep.py":65
  *         if args[i][j] == "-d" or args[i][j] == "-D": # specify gap
  *             try: gap = int(args[i][j+1])/1000
  *             except:             # <<<<<<<<<<<<<<
@@ -3282,40 +3282,40 @@ PyMODINIT_FUNC PyInit_beep(void)
  */
           /*except:*/ {
             __Pyx_AddTraceback("beep", __pyx_clineno, __pyx_lineno, __pyx_filename);
-            if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_13, &__pyx_t_9) < 0) __PYX_ERR(0, 66, __pyx_L41_except_error)
+            if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_13, &__pyx_t_9) < 0) __PYX_ERR(0, 65, __pyx_L41_except_error)
             __Pyx_GOTREF(__pyx_t_1);
             __Pyx_GOTREF(__pyx_t_13);
             __Pyx_GOTREF(__pyx_t_9);
 
-            /* "beep.py":67
+            /* "beep.py":66
  *             try: gap = int(args[i][j+1])/1000
  *             except:
  *                 print("Invalid argument format\nView help with "+beep[0]+" -h")             # <<<<<<<<<<<<<<
  *                 exit()
  *     sine(frequency=freq,duration=duration) # play tone
  */
-            __pyx_t_8 = __Pyx_GetModuleGlobalName(__pyx_n_s_beep); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 67, __pyx_L41_except_error)
+            __pyx_t_8 = __Pyx_GetModuleGlobalName(__pyx_n_s_beep); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 66, __pyx_L41_except_error)
             __Pyx_GOTREF(__pyx_t_8);
-            __pyx_t_7 = __Pyx_GetItemInt(__pyx_t_8, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 67, __pyx_L41_except_error)
+            __pyx_t_7 = __Pyx_GetItemInt(__pyx_t_8, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 66, __pyx_L41_except_error)
             __Pyx_GOTREF(__pyx_t_7);
             __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-            __pyx_t_8 = PyNumber_Add(__pyx_kp_s_Invalid_argument_format_View_hel, __pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 67, __pyx_L41_except_error)
+            __pyx_t_8 = PyNumber_Add(__pyx_kp_s_Invalid_argument_format_View_hel, __pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 66, __pyx_L41_except_error)
             __Pyx_GOTREF(__pyx_t_8);
             __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-            __pyx_t_7 = PyNumber_Add(__pyx_t_8, __pyx_kp_s_h_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 67, __pyx_L41_except_error)
+            __pyx_t_7 = PyNumber_Add(__pyx_t_8, __pyx_kp_s_h_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 66, __pyx_L41_except_error)
             __Pyx_GOTREF(__pyx_t_7);
             __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-            if (__Pyx_PrintOne(0, __pyx_t_7) < 0) __PYX_ERR(0, 67, __pyx_L41_except_error)
+            if (__Pyx_PrintOne(0, __pyx_t_7) < 0) __PYX_ERR(0, 66, __pyx_L41_except_error)
             __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-            /* "beep.py":68
+            /* "beep.py":67
  *             except:
  *                 print("Invalid argument format\nView help with "+beep[0]+" -h")
  *                 exit()             # <<<<<<<<<<<<<<
  *     sine(frequency=freq,duration=duration) # play tone
  *     time.sleep(gap) # gap between tones
  */
-            __pyx_t_7 = __Pyx_PyObject_CallNoArg(__pyx_builtin_exit); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 68, __pyx_L41_except_error)
+            __pyx_t_7 = __Pyx_PyObject_CallNoArg(__pyx_builtin_exit); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 67, __pyx_L41_except_error)
             __Pyx_GOTREF(__pyx_t_7);
             __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -3325,7 +3325,7 @@ PyMODINIT_FUNC PyInit_beep(void)
           }
           __pyx_L41_except_error:;
 
-          /* "beep.py":65
+          /* "beep.py":64
  *                 exit()
  *         if args[i][j] == "-d" or args[i][j] == "-D": # specify gap
  *             try: gap = int(args[i][j+1])/1000             # <<<<<<<<<<<<<<
@@ -3347,7 +3347,7 @@ PyMODINIT_FUNC PyInit_beep(void)
           __pyx_L46_try_end:;
         }
 
-        /* "beep.py":64
+        /* "beep.py":63
  *                 print("Invalid argument format\nView help with "+beep[0]+" -h")
  *                 exit()
  *         if args[i][j] == "-d" or args[i][j] == "-D": # specify gap             # <<<<<<<<<<<<<<
@@ -3356,7 +3356,7 @@ PyMODINIT_FUNC PyInit_beep(void)
  */
       }
 
-      /* "beep.py":53
+      /* "beep.py":52
  *     duration = 1
  *     gap = 0
  *     for j in range(len(args[i])):             # <<<<<<<<<<<<<<
@@ -3366,43 +3366,43 @@ PyMODINIT_FUNC PyInit_beep(void)
     }
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "beep.py":69
+    /* "beep.py":68
  *                 print("Invalid argument format\nView help with "+beep[0]+" -h")
  *                 exit()
  *     sine(frequency=freq,duration=duration) # play tone             # <<<<<<<<<<<<<<
  *     time.sleep(gap) # gap between tones
  * exit()
  */
-    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_sine); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 69, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_sine); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 68, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_9 = PyDict_New(); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 69, __pyx_L1_error)
+    __pyx_t_9 = PyDict_New(); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 68, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_freq); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 69, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_freq); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 68, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_frequency, __pyx_t_13) < 0) __PYX_ERR(0, 69, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_frequency, __pyx_t_13) < 0) __PYX_ERR(0, 68, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_duration); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 69, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_duration); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 68, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_duration, __pyx_t_13) < 0) __PYX_ERR(0, 69, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_duration, __pyx_t_13) < 0) __PYX_ERR(0, 68, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_9); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 69, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_9); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 68, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
-    /* "beep.py":70
+    /* "beep.py":69
  *                 exit()
  *     sine(frequency=freq,duration=duration) # play tone
  *     time.sleep(gap) # gap between tones             # <<<<<<<<<<<<<<
  * exit()
  */
-    __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_time); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 70, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_time); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 69, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_sleep); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 70, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_sleep); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 69, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-    __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_gap); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 70, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_gap); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 69, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __pyx_t_1 = NULL;
     if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -3415,14 +3415,14 @@ PyMODINIT_FUNC PyInit_beep(void)
       }
     }
     if (!__pyx_t_1) {
-      __pyx_t_13 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_9); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 70, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_9); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 69, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_GOTREF(__pyx_t_13);
     } else {
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_2)) {
         PyObject *__pyx_temp[2] = {__pyx_t_1, __pyx_t_9};
-        __pyx_t_13 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 70, __pyx_L1_error)
+        __pyx_t_13 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 69, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_GOTREF(__pyx_t_13);
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
@@ -3431,20 +3431,20 @@ PyMODINIT_FUNC PyInit_beep(void)
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
         PyObject *__pyx_temp[2] = {__pyx_t_1, __pyx_t_9};
-        __pyx_t_13 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 70, __pyx_L1_error)
+        __pyx_t_13 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 69, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_GOTREF(__pyx_t_13);
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       } else
       #endif
       {
-        __pyx_t_7 = PyTuple_New(1+1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 70, __pyx_L1_error)
+        __pyx_t_7 = PyTuple_New(1+1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 69, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_1); __pyx_t_1 = NULL;
         __Pyx_GIVEREF(__pyx_t_9);
         PyTuple_SET_ITEM(__pyx_t_7, 0+1, __pyx_t_9);
         __pyx_t_9 = 0;
-        __pyx_t_13 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_7, NULL); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 70, __pyx_L1_error)
+        __pyx_t_13 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_7, NULL); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 69, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_13);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       }
@@ -3452,7 +3452,7 @@ PyMODINIT_FUNC PyInit_beep(void)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
-    /* "beep.py":49
+    /* "beep.py":48
  * gap = 0
  * 
  * for i in range(len(args)):             # <<<<<<<<<<<<<<
@@ -3462,12 +3462,12 @@ PyMODINIT_FUNC PyInit_beep(void)
   }
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-  /* "beep.py":71
+  /* "beep.py":70
  *     sine(frequency=freq,duration=duration) # play tone
  *     time.sleep(gap) # gap between tones
  * exit()             # <<<<<<<<<<<<<<
  */
-  __pyx_t_10 = __Pyx_PyObject_CallNoArg(__pyx_builtin_exit); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyObject_CallNoArg(__pyx_builtin_exit); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 

@@ -7,6 +7,9 @@ Created in Python 3.6 using [pysine](https://pypi.org/project/pysine/). Is desig
 Either copy the binary in `dist\` or the python program to your path in `/bin` or `~/.local/bin`. Can be run without dependencies if used in binary form.
 
 ## Dependencies
+**Dependencies for general use:**
+* ALSA
+
 **Dependencies for python3 program:**
 * python3
 * pysine
@@ -18,10 +21,10 @@ Either copy the binary in `dist\` or the python program to your path in `/bin` o
 
 ## Compiling
 ```
-cython beep.py --embed
-gcc -Os -I /usr/include/python3.6m -o beep beep.c -lpython3.6m -lpthread -lm -lutil -ldl
+cython beep.py --embed #convert python to c
+gcc -Os -I /usr/include/python3.6m -o beep beep.c -lpython3.6m -lpthread -lm -lutil -ldl #compile c code
 ```
-Modify the gcc command with your python version
+Modify the gcc command with your python version which can be found with `python3 -V`
 
 ## Usage
 ```
@@ -39,9 +42,9 @@ Parameters:
 ```
 
 ## TODO
-• Support for more beep arguments
+* Support for more beep arguments
 
-• Argument aliases
+* Argument aliases
 
 ## Resources 
 Original beep program: [https://github.com/johnath/beep](https://github.com/johnath/beep)

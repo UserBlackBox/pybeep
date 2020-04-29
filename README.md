@@ -4,11 +4,12 @@ python3 alternative to beep using ALSA
 Created in Python 3.6 using [pysine](https://pypi.org/project/pysine/). Is designed to be an alternative to [beep](https://github.com/johnath/beep) for use on computers without a pcspkr like laptops. Has the same arguments as beep.
 
 ## Install
-Either copy the binary in `dist\` or the python program to your path in `/bin` or `~/.local/bin`. Can be run without dependencies if used in binary form.
+Either copy the binary in `dist/` or the python program to your path in `/bin` or `~/.local/bin`.
 
 ## Dependencies
-**Dependencies for general use:**
+**General Dependencies:**
 * ALSA
+The included binary is made for python3.6, if you are using a different version you will need to compile it or run it interpreted
 
 **Dependencies for python3 program:**
 * python3
@@ -16,6 +17,7 @@ Either copy the binary in `dist\` or the python program to your path in `/bin` o
 * portaudio19-dev
 
 **Dependencies for compiling:**
+* All the dependencies listed above
 * gcc
 * cython
 
